@@ -1,5 +1,12 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<div class="ui left fixed vertical menu">
+  <div class="item">
+    GeoSupport UI
+  </div>
+  {{#each this.model as |function|}}
+    {{#link-to 'function' function.function}}
+      {{function.function}}
+    {{/link-to}}
+  {{/each}}
+</div>
 
 {{outlet}}
