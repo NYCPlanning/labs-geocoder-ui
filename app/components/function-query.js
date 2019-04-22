@@ -3,7 +3,7 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import fetch from 'fetch';
 
-const API = 'http://geosupport.planninglabs.nyc';
+const API = 'https://geosupport.planninglabs.nyc';
 
 const objectToQueryString = (object) => Object.keys(object).map(key => key + '=' + object[key]).join('&');
 
