@@ -1,12 +1,19 @@
-<div class="ui left fixed vertical menu">
-  <div class="item">
-    GeoSupport UI
+<div class="ui container">
+  <div class="ui grid">
+    <div class="four wide column">
+      <div class="ui vertical menu">
+        <div class="item">
+          GeoSupport UI
+        </div>
+        {{#each this.model as |function|}}
+          {{#link-to 'function' function.function class='item'}}
+            {{function.function}}
+          {{/link-to}}
+        {{/each}}
+      </div>
+    </div>
+    <div class="twelve wide column">
+      {{outlet}}
+    </div>
   </div>
-  {{#each this.model as |function|}}
-    {{#link-to 'function' function.function}}
-      {{function.function}}
-    {{/link-to}}
-  {{/each}}
 </div>
-
-{{outlet}}
